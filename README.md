@@ -129,7 +129,7 @@ f
 
 ---
 
-### 5) Create a replication slot (critical)
+### 5) Create a replication slot 
 
 Replication slots prevent WAL loss.
 
@@ -204,7 +204,7 @@ docker ps
 
 ---
 
-## Verify replication (authoritative checks)
+## Verify replication
 
 ### From the **primary**
 
@@ -285,7 +285,7 @@ ERROR: cannot execute INSERT in a read-only transaction
 
 ---
 
-## How replication works (conceptual)
+## How replication works
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2A_UfCOH_HlSqzTMvodsvLLA.png)
 

@@ -8,7 +8,7 @@ This guide helps you diagnose **why replication is not working** and how to fix 
 
 ---
 
-## Quick mental model (keep this in mind)
+## Quick mental model
 
 ![Image](https://scalegrid.io/wp-content/uploads/postgres_streaming.jpg)
 
@@ -64,7 +64,7 @@ SELECT now() - pg_last_xact_replay_timestamp();
 * Old data is visible
 * New inserts never appear
 
-### What it means (plain language)
+### What it means
 
 The replica took a **snapshot photo**, but never started watching the **live video**.
 
@@ -170,7 +170,7 @@ This is like asking for CCTV footage that was already deleted.
 
 ---
 
-## 5️⃣ Replica accepts writes (this is bad)
+## 5️⃣ Replica accepts writes
 
 ### Symptoms
 
@@ -225,7 +225,7 @@ This database thinks it is a **primary**.
 no pg_hba.conf entry for host ...
 ```
 
-### What it means (plain language)
+### What it means
 
 The door exists, but the **security guard says no**.
 
@@ -259,7 +259,7 @@ Restart primary.
 * Old data appears
 * WAL errors persist after fixes
 
-### What it means (plain language)
+### What it means
 
 You reused a **dirty hard drive**.
 
@@ -300,7 +300,7 @@ Then re-run base backup.
 
 ---
 
-## Decision tree (when stuck)
+## Decision tree
 
 ![Image](https://www.postgresql.fastware.com/hubfs/Images/Blogs/img-dgm-logical-replcation-architecture-01.svg)
 
@@ -318,7 +318,7 @@ If WAL is missing → **rebuild immediately**.
 
 ---
 
-## Final rules to remember (print-worthy)
+## Final rules to remember 
 
 * Replicas are **disposable**
 * WAL loss is **fatal** to a replica
