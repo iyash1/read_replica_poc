@@ -331,3 +331,8 @@ docker volume rm read_replicas_replica_data
 * This mirrors how managed services (e.g., RDS) work internally.
 
 ---
+
+## NEXT STEPS:
+1. Add another replica -- 1 MASTER, 2 REPLICAS
+2. Create a simple app that writes to the Master but reads from the Replica
+3. Create failover that makes the replica a master on master failure -- try both Manual switching and automatic switching
